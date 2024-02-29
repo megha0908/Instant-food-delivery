@@ -10,8 +10,8 @@ class Profile extends Component {
     this.state = {
       userInfo: {
         name: "",
-        bio: ""
-      }
+        bio: "",
+      },
     };
     // console.log("Profile-Parent constructor");
   }
@@ -21,7 +21,7 @@ class Profile extends Component {
     const json = await response.json();
     this.setState({
       userInfo: json,
-    })
+    });
     // console.log("Profile-Parent componentDidMount");
   }
 
@@ -37,18 +37,22 @@ class Profile extends Component {
     // console.log("Profile-Parent - render");
     return (
       <>
-        {userInfo.name === "" ? null : (<div className="profile-class-container">
-          <div className="profile-container">
-            <h1 className="profile-title">About Me</h1>
-            <ProfileUserClass data={userInfo} />
-            {/* Passing props data (full json data) from parent to child */}
+        {userInfo.name === "" ? null : (
+          <div className="profile-class-container">
+            <div className="profile-container">
+              <h1 className="profile-title">About Me</h1>
+              <ProfileUserClass data={userInfo} />
+              {/* Passing props data (full json data) from parent to child */}
+            </div>
+            <div className="repo-container">
+              <h1 className="repo-title">
+                <span>Instant-food-delivery</span> App Github Repository
+              </h1>
+              {/* Passing props followers from parent to child */}
+              <ProfileRepoClass followers={userInfo} />
+            </div>
           </div>
-          <div className="repo-container">
-            <h1 className="repo-title">Food<span>Fire</span> App Github Repository</h1>
-            {/* Passing props followers from parent to child */}
-            <ProfileRepoClass followers={userInfo} />
-          </div>
-        </div>)}
+        )}
       </>
     );
   }

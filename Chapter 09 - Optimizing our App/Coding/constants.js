@@ -21,17 +21,17 @@ export const shimmer_card_unit = 20;
 export const shimmer_menu_card_unit = 4;
 
 // Github - username
-export const Github_UserName = "ChetanNada";
-export const Github_Repository_Name = "Namaste-React";
+export const Github_UserName = "Megha0908";
+export const Github_Repository_Name = "Namaste-React-main";
 
 // Github API for User
 export const Github_API_User = "https://api.github.com/users/";
 
 // Social Media Links
-export const Linkedin_Link = "https://www.linkedin.com/in/chetannada/";
-export const Twitter_Link = "https://twitter.com/ChetanNada";
-export const Github_Link = "https://github.com/chetannada";
-export const Email_Link = "mailto:call2chetannada@gmail.com";
+export const Linkedin_Link ="https://www.linkedin.com/in/kumari-megha-065524285/ ";
+export const Github_Link = "https://github.com/megha0908";
+export const Email_Link = "mailto:meghaonly1@gmail.com";
+// export const Codehef_link = "https://www.codechef.com/users/megha49";
 
 // Github Authorization Token
 export const options = {
